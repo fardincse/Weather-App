@@ -87,7 +87,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         SizedBox(height: 10),
                         Text(
-                          // '${data!.location!.name}, ${data.location!.country}',
                           '${weather.location!.name}, ${weather.location!.country}',
                           style: TextStyle(fontSize: 30, color: Colors.white),
                         ),
@@ -95,16 +94,16 @@ class _MyHomePageState extends State<MyHomePage> {
                           'Today, ${DateFormat('d MMM').format(DateTime.parse(weather.forecast!.forecastday!.first.date ?? ''))}',
                           style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 10),
                         SizedBox(
-                          width: 200,
-                          height: 200,
+                          width: 170,
+                          height: 170,
                           child: Image.network(
                             'https:${weather.current!.condition!.icon!}',
                             fit: BoxFit.contain,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 10),
                         Text(
                           weather.current!.tempC!.toString(),
                           style: TextStyle(
